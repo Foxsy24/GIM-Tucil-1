@@ -1,0 +1,17 @@
+Tiny Pixel Menu Panels Pack License
+
+Allowed:
+- Use the included PNG assets in personal and commercial game projects.
+- Modify the assets for use inside your own game projects.
+- Include modified or unmodified assets as part of a compiled game or interactive project.
+
+Not allowed:
+- Resell, redistribute, repackage, or upload the raw assets as a standalone asset pack.
+- Claim the raw assets as your own original artwork.
+- Use the raw assets for marketplace listings, NFT/minting, stock libraries, training datasets, or asset-pack redistribution.
+
+No warranty:
+The assets are provided as-is. Engine-specific support, custom edits, troubleshooting, and long-term maintenance are not included.
+
+AI disclosure:
+This asset pack was created with AI-assisted planning and programmatic drawing tools, then reviewed and packaged as a digital game-asset pack.

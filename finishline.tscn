@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://72krle3d6rij"]
+
+[ext_resource type="Script" uid="uid://8rvcg5qd88ej" path="res://script/finish_line.gd" id="1_fyttc"]
+
+[node name="Finishline" type="Area2D" unique_id=1716316464]
+collision_mask = 2
+script = ExtResource("1_fyttc")
+
+[node name="Timer" type="Timer" parent="." unique_id=746908810]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

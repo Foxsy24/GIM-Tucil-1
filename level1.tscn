@@ -10,6 +10,8 @@
 [ext_resource type="FontFile" uid="uid://cp4pkmpejtayi" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="8_vef74"]
 [ext_resource type="AudioStream" uid="uid://cleuov6h57fqc" path="res://brackeys_platformer_assets/music/time_for_adventure.mp3" id="9_vef74"]
 [ext_resource type="Script" uid="uid://bm7lnqeymtlee" path="res://script/hud.gd" id="10_hve3p"]
+[ext_resource type="PackedScene" uid="uid://72krle3d6rij" path="res://finishline.tscn" id="11_mx85b"]
+[ext_resource type="Texture2D" uid="uid://24h347s5x10j" path="res://icon.svg" id="12_hx44q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc0e3"]
 texture = ExtResource("3_feb5d")
@@ -253,7 +255,9 @@ _data = {
 &"new_animation": SubResource("Animation_mfdv2")
 }
 
-[node name="Game" type="Node2D" unique_id=430618979]
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+
+[node name="Level 1" type="Node2D" unique_id=430618979]
 
 [node name="gameManager" type="Node" parent="." unique_id=1750594603]
 unique_name_in_owner = true
@@ -362,6 +366,17 @@ offset_right = 8.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("8_vef74")
 text = "Return"
+
+[node name="Finishline" parent="." unique_id=1045291437 instance=ExtResource("11_mx85b")]
+position = Vector2(766, -29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finishline" unique_id=1298355328]
+shape = SubResource("CircleShape2D_5h11f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Finishline" unique_id=644340932]
+position = Vector2(0.24998093, 0.24998093)
+scale = Vector2(0.12109351, 0.12109351)
+texture = ExtResource("12_hx44q")
 
 [connection signal="pressed" from="HUD/Button" to="gameManager" method="_on_button_pressed"]
 [connection signal="pressed" from="HUD/Button" to="HUD" method="_on_button_pressed"]
